@@ -11,4 +11,31 @@
     <string name="hello_blank_fragment4">Hello blank fragment1</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="binaryanswer">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="interactionstime">
+        <item>Less than an hour</item>
+        <item>Between 1 and 3 hours</item>
+        <item>Between 3 and 5 hours</item>
+        <item>Between 5 and 8 hours</item>
+        <item>More than 8 hours</item>
+    </string-array>
+
+    <string-array name="interactionsplace">
+        <item>Indoors</item>
+        <item>Outdoors</item>
+    </string-array>
+
+    <string-array name="interactionspeople">
+        <item>Fewer than 5</item>
+        <item>5-10</item>
+        <item>10-20</item>
+        <item>20-100</item>
+        <item>100+</item>
+    </string-array>
+
 </resources>

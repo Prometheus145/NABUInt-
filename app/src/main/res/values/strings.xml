@@ -37,5 +37,8 @@
         <item>20-100</item>
         <item>100+</item>
     </string-array>
+    <string name="button_personal_form">Take Risk Evaluation Form</string>
+    <string name="text_risk_eval_title">Personal Risk Evaluation Form</string>
+    <string name="text_risk_eval_descr">Below you will be asked a series of questions in three separate categories to assess your risk of COVID-19 infection. Once you submit, you will be give a number from 0 - 100, 0 being least susceptible and 100 being most susceptible.</string>
 
 </resources>

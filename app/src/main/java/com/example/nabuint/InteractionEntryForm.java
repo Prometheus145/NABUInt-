@@ -10,6 +10,12 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
+
 public class InteractionEntryForm  extends AppCompatActivity {
 
     private String interactionsSANT_res = "";
@@ -17,13 +23,17 @@ public class InteractionEntryForm  extends AppCompatActivity {
     private String interactionsPPL_res = "";
     private String interactionsTIME_res = "";
     private String interactionsLOC_res = "";
+    private ArrayList<String> form_responses;
 
     private static final String FORM_RESPONSES_FILE = "form_responses.txt";
+    // device file path: /data/data/com.example.nabuint/files/form_responses.txt
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.interaction_entry_form);
+
+        form_responses = new ArrayList<String>();
 
         // spinner 1 - Sanitation
         Spinner spinner1 = findViewById(R.id.spinner1);
@@ -121,5 +131,41 @@ public class InteractionEntryForm  extends AppCompatActivity {
         });
 
 
+    }
+
+    public void submit(View view){
+        form_responses.add(interactionsSANT_res);
+        form_responses.add(interactionsSD_res);
+        form_responses.add(interactionsPPL_res);
+        form_responses.add(interactionsTIME_res);
+        form_responses.add(interactionsLOC_res);
+
+        FileOutputStream fos = null;
+
+        try {
+            fos = openFileOutput(FORM_RESPONSES_FILE, MODE_APPEND | MODE_PRIVATE);
+            for (String s: form_responses) {
+                fos.write((s + "\n").getBytes());
+            }
+            form_responses = null;
+            fos.write(("\n").getBytes());
+            Toast.makeText(this, "Saved your responses to " + getFilesDir() + "/" + FORM_RESPONSES_FILE, Toast.LENGTH_LONG).show();
+            TimeUnit.SECONDS.sleep(1);
+        } catch (FileNotFoundException e){
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } finally {
+            if (fos != null){
+                try {
+                    fos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }
     }
 }

@@ -3,6 +3,7 @@ package com.example.nabuint;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -167,5 +168,10 @@ public class InteractionEntryForm  extends AppCompatActivity {
 
             }
         }
+        returnToMain(view);
+    }
+
+    public void returnToMain(View v){
+        startActivity(new Intent(InteractionEntryForm.this, MainActivity.class));
     }
 }

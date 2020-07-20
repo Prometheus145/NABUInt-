@@ -3,7 +3,7 @@
     <string name="tab_text1">Risk Score</string>
     <string name="tab_text2">Enter Interactions</string>
     <string name="tab_text3">Interaction History</string>
-    <string name="tab_text4">Interaction History</string>
+    <string name="tab_text4">Additional Info</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment1">Hello blank fragment1</string>
     <string name="hello_blank_fragment2">Hello blank fragment2</string>

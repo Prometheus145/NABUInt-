@@ -173,5 +173,6 @@ public class InteractionEntryForm  extends AppCompatActivity {
 
     public void returnToMain(View v){
         startActivity(new Intent(InteractionEntryForm.this, MainActivity.class));
+        finish();
     }
 }

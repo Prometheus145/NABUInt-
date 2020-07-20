@@ -68,6 +68,7 @@ public class Tab1 extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), PersonalForm1.class);
                 startActivity(intent);
+                getActivity().finish();
             }
         });
 

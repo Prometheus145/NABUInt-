@@ -69,8 +69,7 @@ public class Tab1 extends Fragment {
                 Intent intent = new Intent(getActivity(), PersonalForm1.class);
                 startActivity(intent);
             }
-        }
-        );
+        });
 
         return view;
     }

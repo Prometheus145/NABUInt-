@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InteractionEntryForm">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:dropDownWidth="match_parent"
+        android:spinnerMode="dropdown"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/question1"/>
+
+    <TextView
+        android:id="@+id/question1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question 1) Did you wear appropriate sanitation equipment?" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question2"
+        android:layout_marginTop="10dp"
+        android:dropDownWidth="match_parent"
+        android:spinnerMode="dropdown" />
+
+    <TextView
+        android:id="@+id/question2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner1"
+        android:layout_marginTop="10dp"
+        android:text="Question 2) Did you follow social distancing protocols?" />
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question3"
+        android:layout_marginTop="10dp"
+        android:dropDownWidth="match_parent"
+        android:spinnerMode="dropdown" />
+
+    <TextView
+        android:id="@+id/question3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner2"
+        android:layout_marginTop="10dp"
+        android:text="Question 3) How many people did you interact with?" />
+
+    <Spinner
+        android:id="@+id/spinner4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question4"
+        android:layout_marginTop="10dp"
+        android:dropDownWidth="match_parent"
+        android:spinnerMode="dropdown" />
+
+    <TextView
+        android:id="@+id/question4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner3"
+        android:layout_marginTop="10dp"
+        android:text="Question 4) How long was the interaction?" />
+
+    <Spinner
+        android:id="@+id/spinner5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question5"
+        android:layout_marginTop="10dp"
+        android:dropDownWidth="match_parent"
+        android:spinnerMode="dropdown" />
+
+    <TextView
+        android:id="@+id/question5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner4"
+        android:layout_marginTop="10dp"
+        android:text="Question 5) Were you indoors or outdoors?" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_below="@id/spinner5"/>
+        <!--android:onClick="submit"-->
+
+</RelativeLayout>

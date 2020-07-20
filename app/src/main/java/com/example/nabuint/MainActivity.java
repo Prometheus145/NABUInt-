@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
-    private TabItem tab1,tab2,tab3,tab4;
+    private TabItem tab1,tab2,tab3;
     public PageAdapter pageradapter;
 
     @Override
@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         tab1 = (TabItem) findViewById(R.id.Tab1);
         tab2 = (TabItem) findViewById(R.id.Tab2);
         tab3 = (TabItem) findViewById(R.id.Tab3);
-        tab4 = (TabItem) findViewById(R.id.Tab4);
         viewPager = findViewById(R.id.viewpager);
 
         pageradapter = new PageAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
@@ -46,8 +45,6 @@ public class MainActivity extends AppCompatActivity {
                 } else if (tab.getPosition() == 1) {
                     pageradapter.notifyDataSetChanged();
                 } else if (tab.getPosition() == 2) {
-                    pageradapter.notifyDataSetChanged();
-                } else if (tab.getPosition() == 3) {
                     pageradapter.notifyDataSetChanged();
                 }
             }

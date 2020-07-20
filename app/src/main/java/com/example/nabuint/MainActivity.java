@@ -13,6 +13,8 @@ import com.google.android.material.tabs.TabLayout;
 import android.content.Intent;
 
 
+
+
 public class MainActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
@@ -38,13 +40,14 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
                 if (tab.getPosition() == 0) {
                     pageradapter.notifyDataSetChanged();
                 } else if (tab.getPosition() == 1) {
                     pageradapter.notifyDataSetChanged();
-                } else if (tab.getPosition() == 3) {
+                } else if (tab.getPosition() == 2) {
                     pageradapter.notifyDataSetChanged();
-                } else if (tab.getPosition() == 4) {
+                } else if (tab.getPosition() == 3) {
                     pageradapter.notifyDataSetChanged();
                 }
             }

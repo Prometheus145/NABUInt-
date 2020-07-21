@@ -48,7 +48,7 @@ public class RiskScore {
             environmental_score += environmental_weights[i] * environmental[i];
         }
         // initial form responses percent value
-        double nabu_score_percent = (environmental_score*0.2 + prev_int_score*0.4 + personal_score*0.8);
+        double nabu_score_percent = (environmental_score*0.2 + prev_int_score*0.4 + personal_score*0.4);
 
         // ongoing interaction forms calculation
         double ong_interactions_score = 0;

@@ -168,11 +168,11 @@ public class InteractionEntryForm  extends AppCompatActivity {
 
             }
         }
-        returnToMain(view);
-    }
-
-    public void returnToMain(View v){
-        startActivity(new Intent(InteractionEntryForm.this, MainActivity.class));
         finish();
     }
+
+    /*public void returnToMain(View v){
+        //startActivity(new Intent(InteractionEntryForm.this, MainActivity.class));
+        finish()
+    }*/
 }

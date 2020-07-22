@@ -5,20 +5,17 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="5dp"
+    android:paddingTop="5dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="5dp"
+    android:scrollbars="vertical"
     tools:context=".Tab2">
 
     <!-- TODO: Update blank fragment layout -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_begin="509dp" />
-
+        android:layout_height="wrap_content">
 
 
         <Button
@@ -44,9 +41,98 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/interaction_entries">
+            android:id="@+id/interaction_entries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clear_entries"
+            tools:layout_editor_absoluteY="97dp">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_gravity="start"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="Date"
+                    android:textColor="#000"
+                    android:textSize="11.5sp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="Sanitation"
+                    android:textColor="#000"
+                    android:textSize="11.5sp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="Distancing"
+                    android:textColor="#000"
+                    android:textSize="11.5sp">
+                </TextView>
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="start"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="People"
+                    android:textColor="#000"
+                    android:textSize="11.5sp">
+                </TextView>
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="start"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="Duration"
+                    android:textColor="#000"
+                    android:textSize="11.5sp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="Location"
+                    android:textColor="#000"
+                    android:textSize="11.5sp">
+
+                </TextView>
+            </TableRow>
         </TableLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

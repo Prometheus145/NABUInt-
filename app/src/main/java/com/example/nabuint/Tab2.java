@@ -122,44 +122,18 @@ public class Tab2 extends Fragment {
             }
         });
 
+        populateTable(view);
+
+        return view;
+    }
+
+    public void populateTable(View view){
         // get file values lol
         Activity activity = getActivity();
 
-        TableLayout tbl = (TableLayout) activity.findViewById(R.id.interaction_entries);
-        TableRow tableRow = new TableRow(activity); // may change to getActivity()?
+        TableLayout tbl = (TableLayout) view.findViewById(R.id.interaction_entries);
+        TableRow tableRow;
 
-        TextView head1 = new TextView(activity);
-        head1.setText("Date");
-        head1.setTextColor(Color.BLACK);
-        tableRow.addView(head1);
-
-        TextView head2 = new TextView(activity);
-        head2.setText("Sanitation Measures?");
-        head2.setTextColor(Color.BLACK);
-        tableRow.addView(head2);
-
-        TextView head3 = new TextView(activity);
-        head3.setText("Social Distancing?");
-        head3.setTextColor(Color.BLACK);
-        tableRow.addView(head3);
-
-        TextView head4 = new TextView(activity);
-        head4.setText("# of People");
-        head4.setTextColor(Color.BLACK);
-        tableRow.addView(head4);
-
-        TextView head5 = new TextView(activity);
-        head5.setText("Time");
-        head5.setTextColor(Color.BLACK);
-        tableRow.addView(head5);
-
-        TextView head6 = new TextView(activity);
-        head6.setText("Location");
-        head6.setTextColor(Color.BLACK);
-        tableRow.addView(head6);
-
-        // tbl.addView(tableRow);
-/*
         FileInputStream fis = null;
 
         ArrayList<String> resp_DATE = new ArrayList<>();
@@ -182,7 +156,7 @@ public class Tab2 extends Fragment {
                 resp_SD.add(tmp[2]);
                 resp_PPL.add(tmp[3]);
                 resp_TIME.add(tmp[4]);
-                resp_LOC.add(tmp[4]);
+                resp_LOC.add(tmp[5]);
             }
 
         } catch (FileNotFoundException e) {
@@ -190,47 +164,66 @@ public class Tab2 extends Fragment {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        int count = 0;
+
+        //First Border
+        tableRow = new TableRow(activity);
+        tableRow.setBackgroundColor(Color.BLACK);
+        tableRow.setPadding(0, 0, 0, 2);
+        tbl.addView(tableRow, new TableLayout.LayoutParams(TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT));
 
         for (int i = 0; i < resp_DATE.size(); i++){
-            tableRow = new TableRow(getContext()); // may change to getActivity()?
+            count++;
 
-            TextView val1 = new TextView(getContext());
-            val1.setText("Date");
-            val1.setTextColor(Color.BLACK);
+            tableRow = new TableRow(activity);
+            tableRow.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
+
+            TextView val1 = new TextView(activity);
+            val1.setText(resp_DATE.get(i));
+            val1.setTextSize(10);
+            val1.setPadding(5, 5, 5, 5);
             tableRow.addView(val1);
 
-            TextView val2 = new TextView(getContext());
-            val2.setText("Sanitation Measures?");
-            val2.setTextColor(Color.BLACK);
+            TextView val2 = new TextView(activity);
+            val2.setTextSize(10);
+            val2.setPadding(5, 5, 5, 5);
+            val2.setText(resp_SANT.get(i));
             tableRow.addView(val2);
 
-            TextView val3 = new TextView(getContext());
-            val3.setText("Social Distancing?");
-            val3.setTextColor(Color.BLACK);
+            TextView val3 = new TextView(activity);
+            val3.setTextSize(10);
+            val3.setPadding(5, 5, 5, 5);
+            val3.setText(resp_SD.get(i));
             tableRow.addView(val3);
 
-            TextView val4 = new TextView(getContext());
-            val4.setText("# of People");
-            val4.setTextColor(Color.BLACK);
+            TextView val4 = new TextView(activity);
+            val4.setTextSize(10);
+            val4.setPadding(5, 5, 5, 5);
+            val4.setText(resp_PPL.get(i));
             tableRow.addView(val4);
 
-            TextView val5 = new TextView(getContext());
-            val5.setText("Time?");
-            val5.setTextColor(Color.BLACK);
+            TextView val5 = new TextView(activity);
+            val5.setTextSize(10);
+            val5.setPadding(5, 5, 5, 5);
+            val5.setText(resp_TIME.get(i));
             tableRow.addView(val5);
 
-            TextView val6 = new TextView(getContext());
-            val6.setText("Location?");
-            val6.setTextColor(Color.BLACK);
+            TextView val6 = new TextView(activity);
+            val6.setTextSize(10);
+            val6.setPadding(5, 5, 5, 5);
+            val6.setText(resp_LOC.get(i));
             tableRow.addView(val6);
 
-            tbl.addView(tableRow);
-        }*/
+            tbl.addView(tableRow, new TableLayout.LayoutParams(TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT));
 
-        return view;
+            // Borders
+            tableRow = new TableRow(activity);
+            tableRow.setBackgroundColor(Color.BLACK);
+            tableRow.setPadding(0, 0, 0, 2);
+            tbl.addView(tableRow, new TableLayout.LayoutParams(TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT));
+        }
+        // Toast.makeText(activity, "TEXT:" + count, Toast.LENGTH_LONG).show();
     }
-
-
 
 
 }

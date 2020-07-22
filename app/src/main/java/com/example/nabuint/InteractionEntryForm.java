@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -19,12 +20,14 @@ import java.util.concurrent.TimeUnit;
 
 public class InteractionEntryForm  extends AppCompatActivity {
 
+    private String interactionsDATE_res = "HELLO";
     private String interactionsSANT_res = "";
     private String interactionsSD_res = "";
     private String interactionsPPL_res = "";
     private String interactionsTIME_res = "";
     private String interactionsLOC_res = "";
     private ArrayList<String> form_responses;
+    EditText mEditText;
 
     private static final String FORM_RESPONSES_FILE = "form_responses.txt";
     // device file path: /data/data/com.example.nabuint/files/form_responses.txt
@@ -131,10 +134,15 @@ public class InteractionEntryForm  extends AppCompatActivity {
             }
         });
 
-
     }
 
-    public void submit(View view){
+    public void submit(View view) throws InterruptedException {
+
+        // Edit Text - Date
+        mEditText = (EditText) findViewById(R.id.date_entry);
+        interactionsDATE_res = mEditText.getText().toString();
+
+        form_responses.add(interactionsDATE_res);
         form_responses.add(interactionsSANT_res);
         form_responses.add(interactionsSD_res);
         form_responses.add(interactionsPPL_res);
@@ -146,7 +154,7 @@ public class InteractionEntryForm  extends AppCompatActivity {
         try {
             fos = openFileOutput(FORM_RESPONSES_FILE, MODE_APPEND | MODE_PRIVATE);
             for (String s: form_responses) {
-                fos.write((s + "\n").getBytes());
+                fos.write((s + "\t").getBytes());
             }
             form_responses = null;
             fos.write(("\n").getBytes());

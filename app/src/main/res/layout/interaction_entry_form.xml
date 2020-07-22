@@ -7,6 +7,20 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <EditText
+        android:id="@+id/date_entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/date_question"/>
+
+    <TextView
+        android:id="@+id/date_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the date in MM/DD/YY FORMAT: " />
+
+
     <Spinner
         android:id="@+id/spinner1"
         android:layout_width="wrap_content"
@@ -20,6 +34,8 @@
         android:id="@+id/question1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/date_entry"
+        android:layout_marginTop="10dp"
         android:text="Question 1) Did you wear appropriate sanitation equipment?" />
 
     <Spinner

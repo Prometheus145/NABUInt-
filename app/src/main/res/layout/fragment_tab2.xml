@@ -19,28 +19,35 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_begin="509dp" />
 
+
+
         <Button
-        android:id="@+id/interaction_entry_form_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/interaction_form_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/interaction_entry_form_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/interaction_form_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/clear_entries"
-        android:layout_width="189dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/clear_entries"
-        app:layout_constraintStart_toEndOf="@+id/interaction_entry_form_button"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/clear_entries"
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/clear_entries"
+            app:layout_constraintStart_toEndOf="@+id/interaction_entry_form_button"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/interaction_entries">
+        </TableLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

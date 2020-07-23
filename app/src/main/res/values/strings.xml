@@ -43,6 +43,12 @@
         <item>I have minimal access to sanitation supplies</item>
         <item>I do not have access to sanitation supplies</item>
     </string-array>
+
+    <string-array name="minDiseaseSpinner">
+        <item>I do not have any of the listed health conditions</item>
+        <item>I have 1-2 of the listed health conditions </item>
+        <item>I have 3+ of the listed health conditions</item>
+    </string-array>
     <!-- Interaction form spinner items-->
     <string-array name="binaryanswer">
         <item>Yes</item>

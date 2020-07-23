@@ -167,5 +167,28 @@ any severe symptoms? You can find a list of symptoms here:"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/sanitationQuestion" />
 
+        <TextView
+            android:id="@+id/minDiseaseQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="5. Do you currently have any of these health conditions:
+moderate-severe asthma, hypertension, neurologic conditions, liver disease, pregnancy,
+cerebrovascular disease?"
+            android:textColor = "#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sanitationSpinner" />
+
+        <Spinner
+            android:id="@+id/minDiseaseSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/minDiseaseQuestion" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

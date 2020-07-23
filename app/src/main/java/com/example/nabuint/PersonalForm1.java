@@ -19,6 +19,7 @@ public class PersonalForm1 extends AppCompatActivity {
     private String majDisease = "";
     private String symptoms = "";
     private String sanitation = "";
+    private String minDisease = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,6 +95,24 @@ public class PersonalForm1 extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 sanitation = adapterView.getItemAtPosition(i).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                Toast.makeText(adapterView.getContext(), "Please complete every question.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Minor disease question
+        Spinner minDiseaseSpinner = findViewById(R.id.minDiseaseSpinner);
+        ArrayAdapter<CharSequence> minDiseaseAdapter = ArrayAdapter.createFromResource(this, R.array.minDiseaseSpinner,
+                android.R.layout.simple_spinner_item);
+        minDiseaseAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        minDiseaseSpinner.setAdapter(minDiseaseAdapter);
+        minDiseaseSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                minDisease = adapterView.getItemAtPosition(i).toString();
             }
 
             @Override

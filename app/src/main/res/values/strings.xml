@@ -6,6 +6,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name = "symptomsLink">
+<a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">Symptoms List</a>
+    </string>
 
     <!-- Personal risk eval form spinner items-->
     <string-array name="ageSpinner">
@@ -18,6 +21,27 @@
         <item>65-74</item>
         <item>75-84</item>
         <item>85+</item>
+    </string-array>
+
+    <string-array name="majDiseaseSpinner">
+        <item>I do not have any of the listed health conditions</item>
+        <item>I have 1-2 of the listed health conditions </item>
+        <item>I have 3+ of the listed health conditions</item>
+    </string-array>
+
+    <string-array name="symptomsSpinner">
+        <item>No symptoms</item>
+        <item>1 minor symptom</item>
+        <item>2+ minor symptoms</item>
+        <item>1 severe symptom</item>
+        <item>1 severe and 2+ minor symptoms</item>
+        <item>2+ severe symptoms</item>
+    </string-array>
+
+    <string-array name="sanitationSpinner">
+        <item>I have abundant/stable access to sanitation supplies</item>
+        <item>I have minimal access to sanitation supplies</item>
+        <item>I do not have access to sanitation supplies</item>
     </string-array>
     <!-- Interaction form spinner items-->
     <string-array name="binaryanswer">

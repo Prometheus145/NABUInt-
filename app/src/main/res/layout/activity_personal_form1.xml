@@ -77,17 +77,21 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="24dp"
             android:text="1. Select your age range"
+            android:textColor="#000"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <TextView
             android:id="@+id/cardiovascularQuestion"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            android:text="2. Do you currently have a cardiovascular disease?"
+            android:text="2. Do you currently have any of these health conditions:
+chronic kidney disease, cardiovascular disease, immunocompromised, obesity, type 2
+diabetes mellitus, sickle cell disease?"
+            android:textColor="#000"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ageSpinner" />
 
@@ -95,10 +99,73 @@
             android:id="@+id/ageSpinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.044"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ageQuestion" />
+
+        <Spinner
+            android:id="@+id/majDiseaseSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardiovascularQuestion" />
+
+        <TextView
+            android:id="@+id/symptomsQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="3. Are you showing any minor symptoms? Are you showing
+any severe symptoms? You can find a list of symptoms here:"
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/majDiseaseSpinner" />
+
+        <TextView
+            android:id="@+id/symptomsLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="@string/symptomsLink"
+            android:textColor="#0000FF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/symptomsQuestion" />
+
+        <Spinner
+            android:id="@+id/symptomsSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/symptomsLink" />
+
+        <TextView
+            android:id="@+id/sanitationQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="4. Do you have access to sanitation supplies (masks, gloves, hand rub, etc.)?"
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/symptomsSpinner" />
+
+        <Spinner
+            android:id="@+id/sanitationSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sanitationQuestion" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -1,5 +1,12 @@
 package com.example.nabuint;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class RiskScore {
@@ -10,6 +17,8 @@ public class RiskScore {
     private double [] personal_weights;
     private double [] prev_int_weights;
     private double [] environmental_weights;
+
+    private static final String FORM_RESPONSES_FILE = "form_responses.txt";
 
     /**
      * Note - options in each question should be converted to a double between 0 and 1 to represent
@@ -26,6 +35,7 @@ public class RiskScore {
         personal_weights = new double[]{0.25, 0.2, 0.2, 0.1, 0.1, 0.1, 0.05};
         prev_int_weights = new double[]{0.35, 0.35, 0.2, 0.1};
         environmental_weights = new double[]{0.60, 0.20, 0.10, 0.10};
+        this.interactions = new ArrayList<>();
     }
 
     /**
@@ -70,8 +80,80 @@ public class RiskScore {
         return (int)nabu_score;
     }
 
-    public void addInteractionEntry(double[] interaction){
-        interactions.add(interaction);
+    private void convertInteractionEntrytoPercent(){
+        interactions = new ArrayList<>();
+
+        ArrayList<String> resp_DATE = new ArrayList<>();
+        ArrayList<String> resp_SANT = new ArrayList<>();
+        ArrayList<String> resp_SD = new ArrayList<>();
+        ArrayList<String> resp_PPL = new ArrayList<>();
+        ArrayList<String> resp_TIME = new ArrayList<>();
+        ArrayList<String> resp_LOC = new ArrayList<>();
+
+        FileInputStream fis = null;
+
+        try{
+            BufferedReader br = new BufferedReader(new FileReader(FORM_RESPONSES_FILE));
+            String line = null;
+
+            while((line = br.readLine()) != null){
+                String[] tmp = line.split("\t");
+                resp_DATE.add(tmp[0]);
+                resp_SANT.add(tmp[1]);
+                resp_SD.add(tmp[2]);
+                resp_PPL.add(tmp[3]);
+                resp_TIME.add(tmp[4]);
+                resp_LOC.add(tmp[5]);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        double[] temp;
+        for (int i = 0; i < resp_DATE.size(); i++) {
+            temp = new double[5];
+            if (resp_SANT.get(i).equals("Yes")){
+                temp[0] = 0.0;
+            } else temp[0] = 1.0;
+
+            if (resp_SD.get(i).equals("Yes")){
+                temp[1] = 0.0;
+            } else temp[0] = 1.0;
+
+            if (resp_PPL.get(i).equals("Fewer than 5")){
+                temp[2] = 0.2;
+            } else if (resp_PPL.get(i).equals("5-10")) {
+                temp[2] = 0.4;
+            } else if (resp_PPL.get(i).equals("10-20")) {
+                temp[2] = 0.6;
+            } else if (resp_PPL.get(i).equals("20-100")) {
+                temp[2] = 0.8;
+            } else if (resp_PPL.get(i).equals("100+")) {
+                temp[2] = 1.0;
+            }
+
+            if (resp_TIME.get(i).equals("Less than an hour")){
+                temp[3] = 0.2;
+            } else if (resp_TIME.get(i).equals("Between 1 and 3 hours")) {
+                temp[3] = 0.4;
+            } else if (resp_TIME.get(i).equals("Between 3 and 5 hours")) {
+                temp[3] = 0.6;
+            } else if (resp_TIME.get(i).equals("Between 5 and 8 hours")) {
+                temp[3] = 0.8;
+            } else if (resp_TIME.get(i).equals("More than 8 hours")) {
+                temp[3] = 1.0;
+            }
+
+            if (resp_LOC.get(i).equals("Indoors")){
+                temp[4] = 0.5;
+            } else temp[0] = 1.0;
+
+            interactions.add(temp);
+
+        }
+
     }
 
 

@@ -87,7 +87,6 @@ public class Tab2 extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), InteractionEntryForm.class);
                 startActivity(intent);
-
             }
         });
 
@@ -103,6 +102,7 @@ public class Tab2 extends Fragment {
                     fos.write(("").getBytes());
                     Toast.makeText(getActivity(), "Cleared all responses in " + activity.getFilesDir() + "/" + FORM_RESPONSES_FILE, Toast.LENGTH_LONG).show();
                     TimeUnit.SECONDS.sleep(1);
+                     // temp solution, it refreshes the app
                 } catch (FileNotFoundException e){
                     e.printStackTrace();
                 } catch (IOException e) {
@@ -119,6 +119,15 @@ public class Tab2 extends Fragment {
 
                     }
                 }
+            }
+        });
+
+        Button button3 = (Button) view.findViewById(R.id.refresh);
+        button3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                getActivity().finish();
+                Intent intent = new Intent(getActivity(), MainActivity.class);
+                startActivity(intent);
             }
         });
 

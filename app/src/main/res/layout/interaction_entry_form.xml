@@ -7,18 +7,42 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <TextView
+        android:id="@+id/interaction_form_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:text="Interaction Entry Form"
+        android:textColor="#000"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtRiskEvalDescr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/interaction_form_title"
+        android:layout_marginTop="13dp"
+        android:gravity="center_horizontal"
+        android:text="Use the drop down menus to answer the following information. Responses are automatically logged and displayed on the Interactions Tab after refreshing the page."
+        android:textColor="#000" />
+
     <EditText
         android:id="@+id/date_entry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_below="@id/date_question"/>
+        android:layout_below="@id/date_question" />
 
     <TextView
         android:id="@+id/date_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter the date in MM/DD/YY FORMAT: " />
+        android:text="Enter the date in MM/DD/YY FORMAT: "
+        android:textColor="#070707"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/txtRiskEvalDescr"/>
 
 
     <Spinner
@@ -36,7 +60,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/date_entry"
         android:layout_marginTop="10dp"
-        android:text="Question 1) Did you wear appropriate sanitation equipment?" />
+        android:text="Question 1) Did you wear appropriate sanitation equipment?"
+        android:textColor="#070707" />
 
     <Spinner
         android:id="@+id/spinner2"
@@ -53,7 +78,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/spinner1"
         android:layout_marginTop="10dp"
-        android:text="Question 2) Did you follow social distancing protocols?" />
+        android:text="Question 2) Did you follow social distancing protocols?"
+        android:textColor="#070707" />
 
     <Spinner
         android:id="@+id/spinner3"
@@ -70,7 +96,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/spinner2"
         android:layout_marginTop="10dp"
-        android:text="Question 3) How many people did you interact with?" />
+        android:text="Question 3) How many people did you interact with?"
+        android:textColor="#070707" />
 
     <Spinner
         android:id="@+id/spinner4"
@@ -87,7 +114,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/spinner3"
         android:layout_marginTop="10dp"
-        android:text="Question 4) How long was the interaction?" />
+        android:text="Question 4) How long was the interaction?"
+        android:textColor="#070707" />
 
     <Spinner
         android:id="@+id/spinner5"
@@ -104,7 +132,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/spinner4"
         android:layout_marginTop="10dp"
-        android:text="Question 5) Were you indoors or outdoors?" />
+        android:text="Question 5) Were you indoors or outdoors?"
+        android:textColor="#070707" />
 
     <Button
         android:id="@+id/submit"

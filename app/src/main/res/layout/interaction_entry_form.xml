@@ -25,8 +25,7 @@
         android:layout_below="@id/interaction_form_title"
         android:layout_marginTop="13dp"
         android:gravity="center_horizontal"
-        android:text="Use the drop down menus to answer the following information. Responses are automatically logged and displayed on the Interactions Tab after refreshing the page."
-        android:textColor="#000" />
+        android:text="@string/decsrip_interaction_eval" />
 
     <EditText
         android:id="@+id/date_entry"
@@ -141,6 +140,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/spinner5"
         android:text="Submit"
+        android:layout_marginTop="10dp"
         android:onClick="submit"/>
 
 

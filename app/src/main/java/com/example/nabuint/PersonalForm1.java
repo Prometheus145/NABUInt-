@@ -2,6 +2,7 @@ package com.example.nabuint;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.text.method.LinkMovementMethod;
@@ -12,8 +13,12 @@ import android.widget.Spinner;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.EditText;
 
 public class PersonalForm1 extends AppCompatActivity {
+
+    private int numCases;
+    private int population;
 
     private String ageRange = "";
     private String majDisease = "";
@@ -21,6 +26,11 @@ public class PersonalForm1 extends AppCompatActivity {
     private String sanitation = "";
     private String minDisease = "";
     private String job = "";
+    private String pastDisease = "";
+    private String prevIntSan = "";
+    private String partNum = "";
+    private String inOut = "";
+    private String SD = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +40,10 @@ public class PersonalForm1 extends AppCompatActivity {
         // Link to symptoms
         TextView text = (TextView) findViewById(R.id.symptomsLink);
         text.setMovementMethod(LinkMovementMethod.getInstance());
+
+        // Link to the number of cases in an area
+        TextView text2 = (TextView) findViewById(R.id.numCasesLink);
+        text2.setMovementMethod(LinkMovementMethod.getInstance());
 
 
         // Age question
@@ -139,5 +153,107 @@ public class PersonalForm1 extends AppCompatActivity {
                 Toast.makeText(adapterView.getContext(), "Please complete every question.", Toast.LENGTH_SHORT).show();
             }
         });
+
+        // Past disease question
+        Spinner pastDiseaseSpinner = findViewById(R.id.pastDiseaseSpinner);
+        ArrayAdapter<CharSequence> pastDiseaseAdapter = ArrayAdapter.createFromResource(this, R.array.pastDiseaseSpinner,
+                android.R.layout.simple_spinner_item);
+        pastDiseaseAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        pastDiseaseSpinner.setAdapter(pastDiseaseAdapter);
+        pastDiseaseSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                pastDisease = adapterView.getItemAtPosition(i).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                Toast.makeText(adapterView.getContext(), "Please complete every question.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Previous interactions sanitation question
+        Spinner prevIntSanSpinner = findViewById(R.id.prevIntSanSpinner);
+        ArrayAdapter<CharSequence> prevIntSanAdapter = ArrayAdapter.createFromResource(this, R.array.prevIntSanSpinner,
+                android.R.layout.simple_spinner_item);
+        prevIntSanAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        prevIntSanSpinner.setAdapter(prevIntSanAdapter);
+        prevIntSanSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                prevIntSan = adapterView.getItemAtPosition(i).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                Toast.makeText(adapterView.getContext(), "Please complete every question.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Number of participants question
+        Spinner partNumSpinner = findViewById(R.id.partNumSpinner);
+        ArrayAdapter<CharSequence> partNumAdapter = ArrayAdapter.createFromResource(this, R.array.partNumSpinner,
+                android.R.layout.simple_spinner_item);
+        partNumAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        partNumSpinner.setAdapter(partNumAdapter);
+        partNumSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                partNum = adapterView.getItemAtPosition(i).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                Toast.makeText(adapterView.getContext(), "Please complete every question.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Indoors or Outdoors question
+        Spinner inOutSpinner = findViewById(R.id.inOutSpinner);
+        ArrayAdapter<CharSequence> inOutAdapter = ArrayAdapter.createFromResource(this, R.array.inOutSpinner,
+                android.R.layout.simple_spinner_item);
+        inOutAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        inOutSpinner.setAdapter(inOutAdapter);
+        inOutSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                inOut = adapterView.getItemAtPosition(i).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                Toast.makeText(adapterView.getContext(), "Please complete every question.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Social Distancing question
+        Spinner SDSpinner = findViewById(R.id.SDSpinner);
+        ArrayAdapter<CharSequence> SDAdapter = ArrayAdapter.createFromResource(this, R.array.SDSpinner,
+                android.R.layout.simple_spinner_item);
+        SDAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        SDSpinner.setAdapter(SDAdapter);
+        SDSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                SD = adapterView.getItemAtPosition(i).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                Toast.makeText(adapterView.getContext(), "Please complete every question.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
+
+    public void submit(View view)
+    {
+        EditText editText1 = findViewById(R.id.numCasesInput);
+        numCases = Integer.valueOf(editText1.getText().toString());
+
+        EditText editText2 = findViewById(R.id.populationInput);
+        population = Integer.valueOf(editText2.getText().toString());
+
+
     }
 }

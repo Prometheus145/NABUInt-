@@ -9,6 +9,9 @@
     <string name = "symptomsLink">
 <a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">Symptoms List</a>
     </string>
+    <string name = "numCasesLink">
+<a href = "https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">You can view this map to find out.</a>
+    </string>
 
     <!-- Personal risk eval form spinner items-->
     <string-array name="ageSpinner">
@@ -55,6 +58,37 @@
         <item>I rarely work face to face with others</item>
         <item>I (very) often work face to face with others</item>
     </string-array>
+
+    <string-array name="pastDiseaseSpinner">
+        <item>I have never had any of the listed health conditions</item>
+        <item>I have had 1-2 of the listed health conditions in the past</item>
+        <item>I have had 3+ of the listed health conditions in the past</item>
+    </string-array>
+
+    <string-array name="prevIntSanSpinner">
+        <item>Most/every person took proper sanitation measures</item>
+        <item>Some people took proper sanitation measures</item>
+        <item>Only a few people proper sanitation measures</item>
+        <item>No people took proper sanitation measures</item>
+    </string-array>
+
+    <string-array name="partNumSpinner">
+        <item>Fewer than 5</item>
+        <item>5-10</item>
+        <item>10-20</item>
+        <item>20+</item>
+    </string-array>
+
+    <string-array name="inOutSpinner">
+        <item>Outdoors</item>
+        <item>Indoors</item>
+    </string-array>
+
+    <string-array name="SDSpinner">
+        <item>Always/often</item>
+        <item>Rarely/Never</item>
+    </string-array>
+
     <!-- Interaction form spinner items-->
     <string-array name="binaryanswer">
         <item>Yes</item>

@@ -120,4 +120,6 @@
     <string name="text_risk_eval_descr">Below you will be asked a series of questions in three separate categories to assess your risk of COVID-19 infection. Once you submit, you will be give a number from 0 - 100, 0 being least susceptible and 100 being most susceptible.</string>
     <string name="interaction_form_button">Add Interaction Entry</string>
     <string name="clear_entries">Clear Entries</string>
+    <string name="refresh">Refresh</string>
+    <string name="decsrip_interaction_eval">Use the drop down menus to answer the following information. Responses are automatically logged and displayed on the Interactions Tab after refreshing the page.</string>
 </resources>

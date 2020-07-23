@@ -123,15 +123,15 @@ public class RiskScore {
             } else temp[0] = 1.0;
 
             if (resp_PPL.get(i).equals("Fewer than 5")){
-                temp[2] = 0.2;
-            } else if (resp_PPL.get(i).equals("5-10")) {
-                temp[2] = 0.4;
-            } else if (resp_PPL.get(i).equals("10-20")) {
-                temp[2] = 0.6;
-            } else if (resp_PPL.get(i).equals("20-100")) {
-                temp[2] = 0.8;
-            } else if (resp_PPL.get(i).equals("100+")) {
-                temp[2] = 1.0;
+                    temp[2] = 0.2;
+                } else if (resp_PPL.get(i).equals("5-10")) {
+                    temp[2] = 0.4;
+                } else if (resp_PPL.get(i).equals("10-20")) {
+                    temp[2] = 0.6;
+                } else if (resp_PPL.get(i).equals("20-100")) {
+                    temp[2] = 0.8;
+                } else if (resp_PPL.get(i).equals("100+")) {
+                    temp[2] = 1.0;
             }
 
             if (resp_TIME.get(i).equals("Less than an hour")){

@@ -31,6 +31,9 @@ public class PersonalForm1 extends AppCompatActivity {
     private String partNum = "";
     private String inOut = "";
     private String SD = "";
+    private String air = "";
+    private String temp = "";
+    private String humid = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -221,7 +224,7 @@ public class PersonalForm1 extends AppCompatActivity {
             }
 
             @Override
-            public void onNothingSelected(AdapterView<i?> adapterView) {
+            public void onNothingSelected(AdapterView<?> adapterView) {
                 Toast.makeText(adapterView.getContext(), "Please complete every question.", Toast.LENGTH_SHORT).show();
             }
         });
@@ -244,6 +247,59 @@ public class PersonalForm1 extends AppCompatActivity {
             }
         });
 
+        // Air quality question
+        Spinner airSpinner = findViewById(R.id.airSpinner);
+        ArrayAdapter<CharSequence> airAdapter = ArrayAdapter.createFromResource(this, R.array.airSpinner,
+                android.R.layout.simple_spinner_item);
+        airAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        airSpinner.setAdapter(airAdapter);
+        airSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                air = adapterView.getItemAtPosition(i).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                Toast.makeText(adapterView.getContext(), "Please complete every question.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Temperature question
+        Spinner tempSpinner = findViewById(R.id.tempSpinner);
+        ArrayAdapter<CharSequence> tempAdapter = ArrayAdapter.createFromResource(this, R.array.tempSpinner,
+                android.R.layout.simple_spinner_item);
+        tempAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        tempSpinner.setAdapter(tempAdapter);
+        tempSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                temp = adapterView.getItemAtPosition(i).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                Toast.makeText(adapterView.getContext(), "Please complete every question.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Humidity question
+        Spinner humidSpinner = findViewById(R.id.humidSpinner);
+        ArrayAdapter<CharSequence> humidAdapter = ArrayAdapter.createFromResource(this, R.array.humidSpinner,
+                android.R.layout.simple_spinner_item);
+        humidAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        humidSpinner.setAdapter(humidAdapter);
+        humidSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                humid = adapterView.getItemAtPosition(i).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                Toast.makeText(adapterView.getContext(), "Please complete every question.", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     public void submit(View view)

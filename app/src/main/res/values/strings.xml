@@ -49,6 +49,12 @@
         <item>I have 1-2 of the listed health conditions </item>
         <item>I have 3+ of the listed health conditions</item>
     </string-array>
+
+    <string-array name="jobSpinner">
+        <item>I currently work from home</item>
+        <item>I rarely work face to face with others</item>
+        <item>I (very) often work face to face with others</item>
+    </string-array>
     <!-- Interaction form spinner items-->
     <string-array name="binaryanswer">
         <item>Yes</item>

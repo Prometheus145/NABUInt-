@@ -190,5 +190,27 @@ cerebrovascular disease?"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/minDiseaseQuestion" />
 
+        <TextView
+            android:id="@+id/jobQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="How would you describe your current occupation in terms of
+contact with others?"
+            android:textColor="#000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/minDiseaseSpinner" />
+
+        <Spinner
+            android:id="@+id/jobSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/jobQuestion" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -460,8 +460,8 @@ the pandemic."
             android:layout_height="wrap_content"
             android:onClick="submit"
             android:text="Submit"
-            tools:layout_editor_absoluteX="265dp"
-            tools:layout_editor_absoluteY="1957dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/populationQuestion"

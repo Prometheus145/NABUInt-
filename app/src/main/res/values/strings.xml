@@ -7,6 +7,19 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!-- Personal risk eval form spinner items-->
+    <string-array name="ageSpinner">
+        <item>0-4</item>
+        <item>5-17 </item>
+        <item>18-29</item>
+        <item>30-39</item>
+        <item>40-49</item>
+        <item>50-64</item>
+        <item>65-74</item>
+        <item>75-84</item>
+        <item>85+</item>
+    </string-array>
+    <!-- Interaction form spinner items-->
     <string-array name="binaryanswer">
         <item>Yes</item>
         <item>No</item>

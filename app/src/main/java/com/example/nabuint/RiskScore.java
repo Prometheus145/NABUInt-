@@ -31,11 +31,12 @@ public class RiskScore {
         this.personal = personal;
         this.prev_int = prev_int;
         this.environmental = environmental;
+        this.interactions = new ArrayList<>();
 
         personal_weights = new double[]{0.25, 0.2, 0.2, 0.1, 0.1, 0.1, 0.05};
         prev_int_weights = new double[]{0.35, 0.35, 0.2, 0.1};
         environmental_weights = new double[]{0.60, 0.20, 0.10, 0.10};
-        this.interactions = new ArrayList<>();
+
     }
 
     /**
@@ -43,6 +44,9 @@ public class RiskScore {
      * @return NABU(risk) score
      */
     public int getNABUscore(){
+
+        convertInteractionEntrytoPercent();
+
         double personal_score = 0;
         double prev_int_score = 0;
         double environmental_score = 0;
@@ -66,12 +70,12 @@ public class RiskScore {
         double [] ong_interaction_weights = new double[]{0.30, 0.30, 0.25, 0.1, 0.05};
         for (double[] d: this.interactions){
             for (int i = 0; i < d.length; i++){
-                ong_interactions_percent = ong_interaction_weights[i] * d[i];
+                ong_interactions_percent += ong_interaction_weights[i] * d[i];
             }
-            ong_interactions_score = ong_interactions_percent * 3;
-            // using 3 as the max amount of points you can get from one interaction entry
+            ong_interactions_score = ong_interactions_score + ong_interactions_percent * 2.0;
+            ong_interactions_percent = 0.0;
+            // using 2 as the max amount of points you can get from one interaction entry
         }
-
 
         //final nabu score
         double nabu_score = ((double)NABU_SCORE_MAX * nabu_score_percent) + ong_interactions_score;
@@ -90,12 +94,10 @@ public class RiskScore {
         ArrayList<String> resp_TIME = new ArrayList<>();
         ArrayList<String> resp_LOC = new ArrayList<>();
 
-        FileInputStream fis = null;
 
         try{
             BufferedReader br = new BufferedReader(new FileReader(FORM_RESPONSES_FILE));
             String line = null;
-
             while((line = br.readLine()) != null){
                 String[] tmp = line.split("\t");
                 resp_DATE.add(tmp[0]);
@@ -105,11 +107,14 @@ public class RiskScore {
                 resp_TIME.add(tmp[4]);
                 resp_LOC.add(tmp[5]);
             }
+            br.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
 
         double[] temp;
         for (int i = 0; i < resp_DATE.size(); i++) {
@@ -120,18 +125,18 @@ public class RiskScore {
 
             if (resp_SD.get(i).equals("Yes")){
                 temp[1] = 0.0;
-            } else temp[0] = 1.0;
+            } else temp[1] = 1.0;
 
             if (resp_PPL.get(i).equals("Fewer than 5")){
-                    temp[2] = 0.2;
-                } else if (resp_PPL.get(i).equals("5-10")) {
-                    temp[2] = 0.4;
-                } else if (resp_PPL.get(i).equals("10-20")) {
-                    temp[2] = 0.6;
-                } else if (resp_PPL.get(i).equals("20-100")) {
-                    temp[2] = 0.8;
-                } else if (resp_PPL.get(i).equals("100+")) {
-                    temp[2] = 1.0;
+                temp[2] = 0.2;
+            } else if (resp_PPL.get(i).equals("5-10")) {
+                temp[2] = 0.4;
+            } else if (resp_PPL.get(i).equals("10-20")) {
+                temp[2] = 0.6;
+            } else if (resp_PPL.get(i).equals("20-100")) {
+                temp[2] = 0.8;
+            } else if (resp_PPL.get(i).equals("100+")) {
+                temp[2] = 1.0;
             }
 
             if (resp_TIME.get(i).equals("Less than an hour")){
@@ -148,7 +153,7 @@ public class RiskScore {
 
             if (resp_LOC.get(i).equals("Indoors")){
                 temp[4] = 0.5;
-            } else temp[0] = 1.0;
+            } else temp[4] = 1.0;
 
             interactions.add(temp);
 

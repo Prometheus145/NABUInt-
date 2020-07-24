@@ -311,5 +311,7 @@ public class PersonalForm1 extends AppCompatActivity {
         population = Integer.valueOf(editText2.getText().toString());
 
 
+
+
     }
 }

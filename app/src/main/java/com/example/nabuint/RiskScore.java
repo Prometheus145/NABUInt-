@@ -33,9 +33,9 @@ public class RiskScore {
         this.environmental = environmental;
         this.interactions = new ArrayList<>();
 
-        personal_weights = new double[]{0.25, 0.2, 0.2, 0.1, 0.1, 0.1, 0.05};
-        prev_int_weights = new double[]{0.35, 0.35, 0.2, 0.1};
-        environmental_weights = new double[]{0.60, 0.20, 0.10, 0.10};
+        personal_weights = new double[]{0.2, 0.25, 0.2, 0.1, 0.1, 0.1, 0.05};
+        prev_int_weights = new double[]{0.35, 0.2, 0.1, 0.35};
+        environmental_weights = new double[]{0.65, 0.25, 0.10};
 
     }
 

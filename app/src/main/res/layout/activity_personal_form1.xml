@@ -43,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="1658dp" />
+            app:layout_constraintGuide_begin="1539dp" />
 
         <TextView
             android:id="@+id/textView2"
@@ -488,7 +488,7 @@ the pandemic."
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/humidSpinner" />
+            app:layout_constraintTop_toBottomOf="@+id/tempSpinner" />
 
         <TextView
             android:id="@+id/populationQuestion"
@@ -571,30 +571,6 @@ in the past three weeks (in degrees Fahrenheit)?"
             android:layout_marginTop="4dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tempQuestion" />
-
-        <TextView
-            android:id="@+id/humidQuestion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="16dp"
-            android:text="16. What was the average humidity in your area
-in the past three weeks?"
-            android:textColor="#000"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tempSpinner" />
-
-        <Spinner
-            android:id="@+id/humidSpinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="4dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/humidQuestion" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

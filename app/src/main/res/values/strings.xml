@@ -62,7 +62,7 @@
     <string-array name="jobSpinner">
         <item>I currently work from home</item>
         <item>I rarely work face to face with others</item>
-        <item>I (very) often work face to face with others</item>
+        <item>I often work face to face with others</item>
     </string-array>
 
     <string-array name="pastDiseaseSpinner">
@@ -74,7 +74,7 @@
     <string-array name="prevIntSanSpinner">
         <item>Most/every person took proper sanitation measures</item>
         <item>Some people took proper sanitation measures</item>
-        <item>Only a few people proper sanitation measures</item>
+        <item>Only a few people took proper sanitation measures</item>
         <item>No people took proper sanitation measures</item>
     </string-array>
 
@@ -100,7 +100,7 @@
         <item>Moderate</item>
         <item>Unhealthy for sensitive groups</item>
         <item>Unhealthy</item>
-        <item>Very Unhealthy</item>
+        <item>Very unhealthy</item>
         <item>Hazardous</item>
     </string-array>
 
@@ -113,13 +113,6 @@
         <item>100+</item>
     </string-array>
 
-    <string-array name="humidSpinner">
-        <item>0-20%</item>
-        <item>20-40%</item>
-        <item>40-60%</item>
-        <item>60-80%</item>
-        <item>80-100%</item>
-    </string-array>
 <!--Interaction Form Stuff-->
     <string-array name="binaryanswer">
         <item>Yes</item>

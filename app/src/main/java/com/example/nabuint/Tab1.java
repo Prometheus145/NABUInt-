@@ -1,5 +1,6 @@
 package com.example.nabuint;
 
+import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,6 +10,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.content.Intent;
 import android.widget.Button;
+import android.widget.Toast;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +37,15 @@ public class Tab1 extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private static final String FORM_RESPONSES_FILE = "form_responses.txt";
+    private static final String PERSONAL_FORM_RESPONSES_FILE = "personal_form_responses.txt";
+    ArrayList<double[]> interactions;
+    private double [] personal;
+    private double [] prev_int;
+    private double [] environmental;
+    RiskScore riskScore;
+    private int NABUScore;
 
     public Tab1() {
         // Required empty public constructor
@@ -63,6 +84,12 @@ public class Tab1 extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_tab1, container, false);
 
+
+        convertInteractionEntrytoPercent();
+        getDoubleValues();
+
+        riskScore = new RiskScore(personal, prev_int, environmental, interactions);
+
         Button button = view.findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -71,6 +98,136 @@ public class Tab1 extends Fragment {
             }
         });
 
+        NABUScore = riskScore.getNABUscore();
+        // to test it - Toast.makeText(getActivity(), Integer.toString(NABUScore), Toast.LENGTH_SHORT).show();
+
         return view;
+    }
+
+    private void convertInteractionEntrytoPercent() {
+        interactions = new ArrayList<>();
+        FileInputStream fis = null;
+        Activity activity = getActivity();
+
+        ArrayList<String> resp_DATE = new ArrayList<>();
+        ArrayList<String> resp_SANT = new ArrayList<>();
+        ArrayList<String> resp_SD = new ArrayList<>();
+        ArrayList<String> resp_PPL = new ArrayList<>();
+        ArrayList<String> resp_TIME = new ArrayList<>();
+        ArrayList<String> resp_LOC = new ArrayList<>();
+
+
+        try{
+            fis = activity.openFileInput(FORM_RESPONSES_FILE);
+            InputStreamReader isr = new InputStreamReader(fis);
+            BufferedReader br = new BufferedReader(isr);
+            String line = null;
+            while((line = br.readLine()) != null){
+                String[] tmp = line.split("\t");
+                resp_DATE.add(tmp[0]);
+                resp_SANT.add(tmp[1]);
+                resp_SD.add(tmp[2]);
+                resp_PPL.add(tmp[3]);
+                resp_TIME.add(tmp[4]);
+                resp_LOC.add(tmp[5]);
+        }
+            br.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        double[] temp;
+        for (int i = 0; i < resp_DATE.size(); i++) {
+            temp = new double[5];
+            if (resp_SANT.get(i).equals("Yes")){
+                temp[0] = 0.0;
+            } else temp[0] = 1.0;
+
+            if (resp_SD.get(i).equals("Yes")){
+                temp[1] = 0.0;
+            } else temp[1] = 1.0;
+
+            if (resp_PPL.get(i).equals("Fewer than 5")){
+                temp[2] = 0.2;
+            } else if (resp_PPL.get(i).equals("5-10")) {
+                temp[2] = 0.4;
+            } else if (resp_PPL.get(i).equals("10-20")) {
+                temp[2] = 0.6;
+            } else if (resp_PPL.get(i).equals("20-100")) {
+                temp[2] = 0.8;
+            } else if (resp_PPL.get(i).equals("100+")) {
+                temp[2] = 1.0;
+            }
+
+            if (resp_TIME.get(i).equals("Less than an hour")){
+                temp[3] = 0.2;
+            } else if (resp_TIME.get(i).equals("Between 1 and 3 hours")) {
+                temp[3] = 0.4;
+            } else if (resp_TIME.get(i).equals("Between 3 and 5 hours")) {
+                temp[3] = 0.6;
+            } else if (resp_TIME.get(i).equals("Between 5 and 8 hours")) {
+                temp[3] = 0.8;
+            } else if (resp_TIME.get(i).equals("More than 8 hours")) {
+                temp[3] = 1.0;
+            }
+
+            if (resp_LOC.get(i).equals("Indoors")){
+                temp[4] = 0.5;
+            } else temp[4] = 1.0;
+
+            interactions.add(temp);
+
+        }
+
+    }
+
+    private void getDoubleValues() {
+
+        Activity activity = getActivity();
+
+        personal = new double[7];
+        prev_int = new double[4];
+        environmental = new double[3];
+        String personal_set = "";
+        String prev_int_set = "";
+        String env_set = "";
+
+        String[] personal_arr = null;
+        String[] prev_int_arr = null;
+        String[] env_arr = null;
+
+        FileInputStream fis = null;
+
+        try{
+            fis = activity.openFileInput(PERSONAL_FORM_RESPONSES_FILE);
+            InputStreamReader isr = new InputStreamReader(fis);
+            BufferedReader br = new BufferedReader(isr);
+            String line = null;
+            personal_set = br.readLine();
+            prev_int_set = br.readLine();
+            env_set = br.readLine();
+            br.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        personal_arr = personal_set.split("\t");
+        prev_int_arr = prev_int_set.split("\t");
+        env_arr = env_set.split("\t");
+
+        for (int i = 0; i < personal_arr.length; i++){
+            personal[i] = Double.parseDouble(personal_arr[i]);
+        }
+        for (int i = 0; i < prev_int_arr.length; i++){
+            prev_int[i] = Double.parseDouble(prev_int_arr[i]);
+        }
+        for (int i = 0; i < env_arr.length; i++){
+            environmental[i] = Double.parseDouble(env_arr[i]);
+        }
+
     }
 }

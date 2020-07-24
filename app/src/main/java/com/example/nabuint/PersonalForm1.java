@@ -17,9 +17,11 @@ import android.widget.EditText;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 public class PersonalForm1 extends AppCompatActivity {
 
@@ -44,6 +46,7 @@ public class PersonalForm1 extends AppCompatActivity {
     private double[] prev_int = new double[4];
     private double[] environmental = new double[3];
     public int riskScore;
+    private String RESPONSES_FILE = "personal_form_responses.txt";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -467,11 +470,52 @@ public class PersonalForm1 extends AppCompatActivity {
             environmental[2] = 2.0/2.0;
         }
 
-        RiskScore riskEval = new RiskScore(personal,prev_int,environmental);
-        riskScore = riskEval.getNABUscore();
+        //RiskScore riskEval = new RiskScore(personal,prev_int,environmental);
+        //riskScore = riskEval.getNABUscore();
 
-        Toast.makeText(PersonalForm1.this,riskScore + "", Toast.LENGTH_SHORT).show();
+        // Toast.makeText(PersonalForm1.this,riskScore + "", Toast.LENGTH_SHORT).show();
         // finish();
+
+
+        FileOutputStream fos = null;
+
+        try {
+            fos = openFileOutput(RESPONSES_FILE, MODE_PRIVATE);
+            for (double d: personal) {
+                fos.write((d + "\t").getBytes());
+            }
+            personal = null;
+            fos.write(("\n").getBytes());
+            for (double d: prev_int) {
+                fos.write((d + "\t").getBytes());
+            }
+            prev_int = null;
+            fos.write(("\n").getBytes());
+            for (double d: environmental) {
+                fos.write((d + "\t").getBytes());
+            }
+            environmental = null;
+            fos.write(("\n").getBytes());
+            Toast.makeText(this, "Saved your responses to " + getFilesDir() + "/" + RESPONSES_FILE, Toast.LENGTH_LONG).show();
+            TimeUnit.SECONDS.sleep(1);
+        } catch (FileNotFoundException e){
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } finally {
+            if (fos != null){
+                try {
+                    fos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }
+
+        finish();
     }
 }
 

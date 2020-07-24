@@ -27,11 +27,11 @@ public class RiskScore {
      * @param prev_int - double array of values ranging from 0 to 1 for prev-interactions factors.
      * @param environmental - double array of values ranging from 0 to 1 for environmental factors.
      */
-    public RiskScore(double[] personal, double[] prev_int, double[] environmental){
+    public RiskScore(double[] personal, double[] prev_int, double[] environmental, ArrayList<double[]> ong_int ){
         this.personal = personal;
         this.prev_int = prev_int;
         this.environmental = environmental;
-        this.interactions = new ArrayList<>();
+        this.interactions = ong_int;
 
         personal_weights = new double[]{0.2, 0.25, 0.2, 0.1, 0.1, 0.1, 0.05};
         prev_int_weights = new double[]{0.35, 0.2, 0.1, 0.35};
@@ -45,7 +45,6 @@ public class RiskScore {
      */
     public int getNABUscore(){
 
-        convertInteractionEntrytoPercent();
 
         double personal_score = 0;
         double prev_int_score = 0;
@@ -82,83 +81,6 @@ public class RiskScore {
 
 
         return (int)nabu_score;
-    }
-
-    private void convertInteractionEntrytoPercent(){
-        interactions = new ArrayList<>();
-
-        ArrayList<String> resp_DATE = new ArrayList<>();
-        ArrayList<String> resp_SANT = new ArrayList<>();
-        ArrayList<String> resp_SD = new ArrayList<>();
-        ArrayList<String> resp_PPL = new ArrayList<>();
-        ArrayList<String> resp_TIME = new ArrayList<>();
-        ArrayList<String> resp_LOC = new ArrayList<>();
-
-
-        try{
-            BufferedReader br = new BufferedReader(new FileReader(FORM_RESPONSES_FILE));
-            String line = null;
-            while((line = br.readLine()) != null){
-                String[] tmp = line.split("\t");
-                resp_DATE.add(tmp[0]);
-                resp_SANT.add(tmp[1]);
-                resp_SD.add(tmp[2]);
-                resp_PPL.add(tmp[3]);
-                resp_TIME.add(tmp[4]);
-                resp_LOC.add(tmp[5]);
-            }
-            br.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
-
-        double[] temp;
-        for (int i = 0; i < resp_DATE.size(); i++) {
-            temp = new double[5];
-            if (resp_SANT.get(i).equals("Yes")){
-                temp[0] = 0.0;
-            } else temp[0] = 1.0;
-
-            if (resp_SD.get(i).equals("Yes")){
-                temp[1] = 0.0;
-            } else temp[1] = 1.0;
-
-            if (resp_PPL.get(i).equals("Fewer than 5")){
-                temp[2] = 0.2;
-            } else if (resp_PPL.get(i).equals("5-10")) {
-                temp[2] = 0.4;
-            } else if (resp_PPL.get(i).equals("10-20")) {
-                temp[2] = 0.6;
-            } else if (resp_PPL.get(i).equals("20-100")) {
-                temp[2] = 0.8;
-            } else if (resp_PPL.get(i).equals("100+")) {
-                temp[2] = 1.0;
-            }
-
-            if (resp_TIME.get(i).equals("Less than an hour")){
-                temp[3] = 0.2;
-            } else if (resp_TIME.get(i).equals("Between 1 and 3 hours")) {
-                temp[3] = 0.4;
-            } else if (resp_TIME.get(i).equals("Between 3 and 5 hours")) {
-                temp[3] = 0.6;
-            } else if (resp_TIME.get(i).equals("Between 5 and 8 hours")) {
-                temp[3] = 0.8;
-            } else if (resp_TIME.get(i).equals("More than 8 hours")) {
-                temp[3] = 1.0;
-            }
-
-            if (resp_LOC.get(i).equals("Indoors")){
-                temp[4] = 0.5;
-            } else temp[4] = 1.0;
-
-            interactions.add(temp);
-
-        }
-
     }
 
 

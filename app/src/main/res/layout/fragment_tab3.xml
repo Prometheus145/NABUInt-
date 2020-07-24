@@ -4,12 +4,151 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:visibility="visible"
+    app:layout_constrainedHeight="false"
+    app:layout_constrainedWidth="false"
+    app:layout_constraintWidth_min="wrap"
     tools:context=".Tab3">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/textView9"
+        android:layout_width="270dp"
+        android:layout_height="60dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="20dp"
+        android:text="Resources"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_margin="30dp"
+        android:autoLink="all"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="20dp"
+        android:text="https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/steps-when-sick.html"
+        android:textAlignment="center"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="342dp"
+        android:layout_height="49dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="70dp"
+        android:autoLink="all"
+        android:clickable="true"
+        android:gravity="right"
+        android:padding="5dp"
+        android:text="https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/steps-when-sick.html"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="305dp"
+        android:layout_height="52dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="100dp"
+        android:autoLink="all"
+        android:clickable="true"
+        android:gravity="left"
+        android:padding="10dp"
+        android:scrollHorizontally="false"
+        android:text="https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/steps-when-sick.html"
+        android:textIsSelectable="false"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="261dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="140dp"
+        android:autoLink="all"
+        android:clickable="true"
+        android:gravity="right"
+        android:padding="10dp"
+        android:text="https://www.cdc.gov/coronavirus/2019-ncov/daily-life-coping/contact-tracing.html "
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="350dp"
+        android:layout_height="277dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="20dp"
+        android:text="Symptoms"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="398dp"
+        android:layout_height="181dp"
+        android:layout_gravity="center"
+        android:layout_margin="9dp"
+        android:autoLink="all"
+        android:clickable="true"
+        android:gravity="right"
+        android:padding="10dp"
+        android:text="https://www.health.harvard.edu/diseases-and-conditions/covid-19-basics "
+        android:textAlignment="center"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="398dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_margin="40dp"
+        android:autoLink="all"
+        android:clickable="true"
+        android:gravity="right"
+
+        android:text="https://www.health.harvard.edu/diseases-and-conditions/covid-19-basics "
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="161dp"
+        android:layout_height="334dp"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="20dp"
+        android:text="Prevention"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="398dp"
+        android:layout_height="193dp"
+        android:layout_gravity="center|bottom"
+        android:layout_margin="40dp"
+        android:autoLink="all"
+        android:clickable="true"
+        android:gravity="right"
+        android:text="https://www.osha.gov/SLTC/covid-19/controlprevention.html "
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="398dp"
+        android:layout_height="162dp"
+        android:layout_gravity="center|bottom"
+        android:layout_margin="40dp"
+        android:autoLink="all"
+        android:clickable="true"
+        android:gravity="right"
+        android:text="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html "
+        android:textSize="13sp" />
+
+
+
 
 </FrameLayout>
+
+

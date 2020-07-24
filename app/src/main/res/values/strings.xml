@@ -7,120 +7,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name = "symptomsLink">
-<a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">Symptoms List</a>
-    </string>
-
-    <string name = "numCasesLink">
-<a href = "https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">You can view this map to find out.</a>
-    </string>
-
-    <string name = "airLink">
-<a href = "https://www.airnow.gov">Visit this link to gain an accurate assessment of your air quality.</a>
-    </string>
-
-    <!-- Personal risk eval form spinner items-->
-    <string-array name="ageSpinner">
-        <item>0-4</item>
-        <item>5-17 </item>
-        <item>18-29</item>
-        <item>30-39</item>
-        <item>40-49</item>
-        <item>50-64</item>
-        <item>65-74</item>
-        <item>75-84</item>
-        <item>85+</item>
-    </string-array>
-
-    <string-array name="majDiseaseSpinner">
-        <item>I do not have any of the listed health conditions</item>
-        <item>I have 1-2 of the listed health conditions </item>
-        <item>I have 3+ of the listed health conditions</item>
-    </string-array>
-
-    <string-array name="symptomsSpinner">
-        <item>No symptoms</item>
-        <item>1 minor symptom</item>
-        <item>2+ minor symptoms</item>
-        <item>1 severe symptom</item>
-        <item>1 severe and 2+ minor symptoms</item>
-        <item>2+ severe symptoms</item>
-    </string-array>
-
-    <string-array name="sanitationSpinner">
-        <item>I have abundant/stable access to sanitation supplies</item>
-        <item>I have minimal access to sanitation supplies</item>
-        <item>I do not have access to sanitation supplies</item>
-    </string-array>
-
-    <string-array name="minDiseaseSpinner">
-        <item>I do not have any of the listed health conditions</item>
-        <item>I have 1-2 of the listed health conditions </item>
-        <item>I have 3+ of the listed health conditions</item>
-    </string-array>
-
-    <string-array name="jobSpinner">
-        <item>I currently work from home</item>
-        <item>I rarely work face to face with others</item>
-        <item>I (very) often work face to face with others</item>
-    </string-array>
-
-    <string-array name="pastDiseaseSpinner">
-        <item>I have never had any of the listed health conditions</item>
-        <item>I have had 1-2 of the listed health conditions in the past</item>
-        <item>I have had 3+ of the listed health conditions in the past</item>
-    </string-array>
-
-    <string-array name="prevIntSanSpinner">
-        <item>Most/every person took proper sanitation measures</item>
-        <item>Some people took proper sanitation measures</item>
-        <item>Only a few people proper sanitation measures</item>
-        <item>No people took proper sanitation measures</item>
-    </string-array>
-
-    <string-array name="partNumSpinner">
-        <item>Fewer than 5</item>
-        <item>5-10</item>
-        <item>10-20</item>
-        <item>20+</item>
-    </string-array>
-
-    <string-array name="inOutSpinner">
-        <item>Outdoors</item>
-        <item>Indoors</item>
-    </string-array>
-
-    <string-array name="SDSpinner">
-        <item>Always/often</item>
-        <item>Rarely/Never</item>
-    </string-array>
-
-    <string-array name="airSpinner">
-        <item>Good</item>
-        <item>Moderate</item>
-        <item>Unhealthy for sensitive groups</item>
-        <item>Unhealthy</item>
-        <item>Very Unhealthy</item>
-        <item>Hazardous</item>
-    </string-array>
-
-    <string-array name="tempSpinner">
-        <item>Below 32</item>
-        <item>32 - 50</item>
-        <item>50 - 70</item>
-        <item>70 - 90</item>
-        <item>90 - 100</item>
-        <item>100+</item>
-    </string-array>
-
-    <string-array name="humidSpinner">
-        <item>0-20%</item>
-        <item>20-40%</item>
-        <item>40-60%</item>
-        <item>60-80%</item>
-        <item>80-100%</item>
-    </string-array>
-    <!-- Interaction form spinner items-->
     <string-array name="binaryanswer">
         <item>Yes</item>
         <item>No</item>
@@ -151,6 +37,8 @@
     <string name="text_risk_eval_descr">Below you will be asked a series of questions in three separate categories to assess your risk of COVID-19 infection. Once you submit, you will be give a number from 0 - 100, 0 being least susceptible and 100 being most susceptible.</string>
     <string name="interaction_form_button">Add Interaction Entry</string>
     <string name="clear_entries">Clear Entries</string>
-    <string name="refresh">Refresh</string>
-    <string name="decsrip_interaction_eval">Use the drop down menus to answer the following information. Responses are automatically logged and displayed on the Interactions Tab after refreshing the page.</string>
+
+
+
+
 </resources>

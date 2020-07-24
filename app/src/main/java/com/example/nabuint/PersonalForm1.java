@@ -471,6 +471,7 @@ public class PersonalForm1 extends AppCompatActivity {
         riskScore = riskEval.getNABUscore();
 
         Toast.makeText(PersonalForm1.this,riskScore + "", Toast.LENGTH_SHORT).show();
+        // finish();
     }
 }
 

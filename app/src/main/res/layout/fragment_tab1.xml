@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        tools:context=".Tab1"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:id="@+id/frameLayout"
-        xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout
+    tools:context=".Tab1"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/frameLayout"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <Button
         android:layout_height="wrap_content"

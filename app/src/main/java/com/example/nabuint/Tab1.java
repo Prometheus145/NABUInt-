@@ -104,8 +104,8 @@ public class Tab1 extends Fragment {
         NABUScore = riskScore.getNABUscore();
 
         // Print NABUScore to screen
-        //TextView riskScoreStr = (TextView) view.findViewById((R.id.riskScoreTxt));
-        //riskScoreStr.setText(Integer.toString(NABUScore));
+        TextView riskScoreStr = (TextView) view.findViewById((R.id.riskScoreTxt));
+        riskScoreStr.setText(Integer.toString(NABUScore));
 
         // Refresh button on risk score tab
         Button button3 = (Button) view.findViewById(R.id.riskScoreRefresh);

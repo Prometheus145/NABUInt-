@@ -25,7 +25,8 @@
         android:layout_below="@id/interaction_form_title"
         android:layout_marginTop="13dp"
         android:gravity="center_horizontal"
-        android:text="@string/decsrip_interaction_eval" />
+        android:text="@string/decsrip_interaction_eval"
+        android:textColor="#000"/>
 
     <EditText
         android:id="@+id/date_entry"
@@ -59,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/date_entry"
         android:layout_marginTop="10dp"
-        android:text="Question 1) Did you wear appropriate sanitation equipment?"
+        android:text="1. Did you wear appropriate sanitation equipment?"
         android:textColor="#070707" />
 
     <Spinner
@@ -77,7 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/spinner1"
         android:layout_marginTop="10dp"
-        android:text="Question 2) Did you follow social distancing protocols?"
+        android:text="2. Did you follow social distancing protocols?"
         android:textColor="#070707" />
 
     <Spinner
@@ -95,7 +96,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/spinner2"
         android:layout_marginTop="10dp"
-        android:text="Question 3) How many people did you interact with?"
+        android:text="3. How many people did you interact with?"
         android:textColor="#070707" />
 
     <Spinner
@@ -113,7 +114,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/spinner3"
         android:layout_marginTop="10dp"
-        android:text="Question 4) How long was the interaction?"
+        android:text="4. How long was the interaction?"
         android:textColor="#070707" />
 
     <Spinner
@@ -131,7 +132,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/spinner4"
         android:layout_marginTop="10dp"
-        android:text="Question 5) Were you indoors or outdoors?"
+        android:text="5. Were you indoors or outdoors?"
         android:textColor="#070707" />
 
     <Button

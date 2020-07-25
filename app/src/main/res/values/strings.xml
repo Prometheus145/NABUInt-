@@ -146,7 +146,9 @@
     <string name="interaction_form_button">Add Interaction Entry</string>
     <string name="clear_entries">Clear Entries</string>
     <string name="refresh">Refresh</string>
-    <string name="decsrip_interaction_eval">Use the drop down menus to answer the following information. Responses are automatically logged and displayed on the Interactions Tab after refreshing the page.</string>
+    <string name="decsrip_interaction_eval">Use the drop down menus to answer the following questions
+        about your interaction. Responses are automatically logged and displayed on the Interactions Tab after refreshing the page.\n\n<u><b>*ALL
+        ENTERED DATA IS ANONYMOUS*</b></u></string>
 
 
 

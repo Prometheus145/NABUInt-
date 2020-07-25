@@ -123,8 +123,8 @@ previous interactions, and environmental factors. Entered social interactions ca
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
-        android:text="30 - 49 Low risk\n50 - 69 Medium risk\n70 - 89
-High risk\n90 - 100+ Extreme risk"
+        android:text="30 - 49: Low risk\n50 - 69: Medium risk\n70 - 89:
+High risk\n90 - 100+: Extreme risk"
         android:textColor="#000"
         android:textStyle="bold"
         android:textSize = "19dp"

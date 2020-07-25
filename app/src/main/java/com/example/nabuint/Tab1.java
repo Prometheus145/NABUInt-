@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.content.Intent;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -48,9 +49,7 @@ public class Tab1 extends Fragment {
     private int NABUScore;
 
     public Tab1() {
-        // Required empty public constructor
-    }
-
+           }
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -66,6 +65,7 @@ public class Tab1 extends Fragment {
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
+
         return fragment;
     }
 
@@ -75,6 +75,7 @@ public class Tab1 extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
         }
     }
 
@@ -82,24 +83,18 @@ public class Tab1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_tab1, container, false);
+        View view =inflater.inflate(R.layout.fragment_tab1, container, false);
 
-
-        convertInteractionEntrytoPercent();
-        getDoubleValues();
-
+        TextView textView = (TextView) view.findViewById(R.id.NABUScore);
+        textView .setText("SCORE:0");
         riskScore = new RiskScore(personal, prev_int, environmental, interactions);
 
-        Button button = view.findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), PersonalForm1.class);
-                startActivity(intent);
-            }
-        });
 
-        NABUScore = riskScore.getNABUscore();
+        NABUScore  = riskScore.getNABUscore();
         // to test it - Toast.makeText(getActivity(), Integer.toString(NABUScore), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), Integer.toString(NABUScore), Toast.LENGTH_SHORT).show();
+
+
 
         return view;
     }

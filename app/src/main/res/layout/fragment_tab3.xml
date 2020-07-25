@@ -86,66 +86,195 @@
         android:text="Symptoms"
         android:textSize="30sp" />
 
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="398dp"
-        android:layout_height="181dp"
-        android:layout_gravity="center"
-        android:layout_margin="9dp"
-        android:autoLink="all"
-        android:clickable="true"
-        android:gravity="right"
-        android:padding="10dp"
-        android:text="https://www.health.harvard.edu/diseases-and-conditions/covid-19-basics "
-        android:textAlignment="center"
-        android:textSize="13sp" />
 
     <TextView
         android:id="@+id/textView22"
-        android:layout_width="398dp"
-        android:layout_height="48dp"
-        android:layout_gravity="center"
-        android:layout_margin="40dp"
-        android:autoLink="all"
-        android:clickable="true"
-        android:gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_gravity="center|left"
+        android:layout_marginRight="20dp"
+        android:text="1. Latency from exposure to symptoms"
+        android:textSize="10sp" />
 
-        android:text="https://www.health.harvard.edu/diseases-and-conditions/covid-19-basics "
-        android:textSize="13sp" />
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:layout_gravity="center|left"
+        android:layout_marginRight="20dp"
+        android:text="2. Peak infectivity at outset of symptoms"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="match_parent"
+        android:layout_height="141dp"
+        android:layout_gravity="center|left"
+        android:layout_marginRight="20dp"
+        android:text="3. 7-14 day typical clinical viral course"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="center|left"
+        android:layout_marginRight="20dp"
+        android:text="4. 80% mild/moderate infection"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center|left"
+        android:layout_marginRight="20dp"
+        android:text="5. 20% Lower respiratory infection"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center|left"
+        android:layout_marginRight="20dp"
+        android:text="6. Hospitalization 10-15%. Death rate 1%-3% (age is a factor)"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center|left"
+        android:layout_marginRight="20dp"
+        android:text="7. Not all victims show symptoms (Asymptomatic"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center|left"
+        android:layout_marginRight="20dp"
+        android:text="8. Cough, trouble breathing, fever"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_gravity="center|left"
+        android:layout_marginRight="20dp"
+        android:text="9. Sore throat"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="365dp"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="20dp"
+        android:text="10. Headaches"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="355dp"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="20dp"
+        android:text="11. Loss of taste/smell"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="345dp"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="20dp"
+        android:text="12. Vomiting, diarrhea"
+        android:textSize="10sp" />
+
+    <TextView
+    android:id="@+id/textView34"
+    android:layout_width="wrap_content"
+    android:layout_height="335dp"
+    android:layout_gravity="bottom"
+    android:layout_marginRight="20dp"
+    android:text="13. Runny nose"
+    android:textSize="10sp" />
+
+
+
+
+
+
+
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="161dp"
-        android:layout_height="334dp"
+        android:layout_height="320dp"
         android:layout_gravity="bottom"
         android:layout_marginRight="20dp"
         android:text="Prevention"
         android:textSize="30sp" />
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="wrap_content"
+        android:layout_height="280dp"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="20dp"
+        android:text="A. Social distancing"
+        android:textSize="10sp" />
+
 
     <TextView
-        android:id="@+id/textView24"
-        android:layout_width="398dp"
-        android:layout_height="193dp"
-        android:layout_gravity="center|bottom"
-        android:layout_margin="40dp"
-        android:autoLink="all"
-        android:clickable="true"
-        android:gravity="right"
-        android:text="https://www.osha.gov/SLTC/covid-19/controlprevention.html "
-        android:textSize="13sp" />
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="270dp"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="20dp"
+        android:text="B. Masks"
+        android:textSize="10sp" />
 
     <TextView
-        android:id="@+id/textView25"
-        android:layout_width="398dp"
-        android:layout_height="162dp"
-        android:layout_gravity="center|bottom"
-        android:layout_margin="40dp"
-        android:autoLink="all"
-        android:clickable="true"
-        android:gravity="right"
-        android:text="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html "
-        android:textSize="13sp" />
+        android:id="@+id/textView37"
+        android:layout_width="wrap_content"
+        android:layout_height="260dp"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="20dp"
+        android:text="C. Washing hands"
+        android:textSize="10sp" />
 
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="20dp"
+        android:text="D. Wiping down surfaces"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="wrap_content"
+        android:layout_height="240dp"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="20dp"
+        android:text="E. Contact tracing"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="421dp"
+        android:layout_height="200dp"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="20dp"
+        android:text="Note: if only one of these symptoms show up, then it likely is NOT COVID. There usually is some sort of combination"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:textAppearance="Bold"/>
 
 
 

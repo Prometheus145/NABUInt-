@@ -5,14 +5,16 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.TableLayout;
 
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 import android.content.Intent;
+import android.widget.TextView;
 
-
+import org.w3c.dom.Text;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +23,21 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private TabItem tab1,tab2,tab3;
     public PageAdapter pageradapter;
+
+    TextView textView;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +50,11 @@ public class MainActivity extends AppCompatActivity {
         tab3 = (TabItem) findViewById(R.id.Tab3);
         viewPager = findViewById(R.id.viewpager);
 
+
+
         pageradapter = new PageAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(pageradapter);
+
 
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override

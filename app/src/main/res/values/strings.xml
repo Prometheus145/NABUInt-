@@ -6,6 +6,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="NABUScore">Score: </string>
 
     <string name = "symptomsLink">
 <a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">Symptoms List</a>
@@ -146,7 +147,6 @@
     <string name="clear_entries">Clear Entries</string>
     <string name="refresh">Refresh</string>
     <string name="decsrip_interaction_eval">Use the drop down menus to answer the following information. Responses are automatically logged and displayed on the Interactions Tab after refreshing the page.</string>
-
 
 
 

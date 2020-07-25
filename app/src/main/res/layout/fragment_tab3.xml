@@ -302,7 +302,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Note: if only one of these symptoms show up, then it likely is NOT COVID. There usually is some sort of combination"
-        android:textAppearance="Bold"
+        android:textStyle="bold"
         android:textSize="30sp"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
@@ -310,5 +310,3 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-

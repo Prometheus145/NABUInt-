@@ -21,6 +21,7 @@ import java.io.InputStreamReader;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -76,6 +77,8 @@ public class Tab1 extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
     }
 
     @Override
@@ -99,7 +102,20 @@ public class Tab1 extends Fragment {
         });
 
         NABUScore = riskScore.getNABUscore();
-        // to test it - Toast.makeText(getActivity(), Integer.toString(NABUScore), Toast.LENGTH_SHORT).show();
+
+        // Print NABUScore to screen
+        //TextView riskScoreStr = (TextView) view.findViewById((R.id.riskScoreTxt));
+        //riskScoreStr.setText(Integer.toString(NABUScore));
+
+        // Refresh button on risk score tab
+        Button button3 = (Button) view.findViewById(R.id.riskScoreRefresh);
+        button3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                getActivity().finish();
+                Intent intent = new Intent(getActivity(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         return view;
     }

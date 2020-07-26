@@ -57,13 +57,31 @@ public class Tab3 extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tab3, container, false);
+        View view = inflater.inflate(R.layout.fragment_tab3, container, false);
 
-            }
-        }
+        // Resource 1
+        TextView text = (TextView) view.findViewById(R.id.resource1);
+        text.setMovementMethod(LinkMovementMethod.getInstance());
+
+        // Resource 2
+        TextView text2 = (TextView) view.findViewById(R.id.resource2);
+        text2.setMovementMethod(LinkMovementMethod.getInstance());
+
+        // Resource 3
+        TextView text3 = (TextView) view.findViewById((R.id.resource3));
+        text3.setMovementMethod(LinkMovementMethod.getInstance());
+
+        // Resource 4
+        TextView text4 = (TextView) view.findViewById((R.id.resource4));
+        text4.setMovementMethod(LinkMovementMethod.getInstance());
+
+        return view;
+    }
+}

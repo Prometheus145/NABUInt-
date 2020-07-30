@@ -20,6 +20,22 @@
 <a href = "https://www.airnow.gov">Visit this link to gain an accurate assessment of your air quality.</a>
     </string>
 
+    <string name="resource1">
+<a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html">All CDC resources on COVID-19</a>
+    </string>
+
+    <string name="resource2">
+<a href="https://www.cdc.gov/coronavirus/2019-ncov/daily-life-coping/index.html">Daily life during the pandemic</a>
+    </string>
+
+    <string name="resource3">
+<a href="https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/steps-when-sick.html">What to do if you are sick</a>
+    </string>
+
+    <string name="resource4">
+<a href="https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html">COVID-19 updates in the U.S.</a>
+    </string>
+
     <!-- Personal risk eval form spinner items-->
     <string-array name="ageSpinner">
         <item>0-4</item>
@@ -149,6 +165,11 @@
     <string name="decsrip_interaction_eval">Use the drop down menus to answer the following questions
         about your interaction. Responses are automatically logged and displayed on the Interactions Tab after refreshing the page.\n\n<u><b>*ALL
         ENTERED DATA IS ANONYMOUS*</b></u></string>
+    <string name="minorSymptoms"><b>Minor Symptoms</b>\nFever or chills\nCough\nDifficulty breathing
+    \nFatigue\nMuscle or body aches\nHeadache\nNew loss of taste or smell\nSore throat\nCongestion or runny nose\nNausea or vomiting\n
+    Diarrhea</string>
+    <string name="severeSymptoms"><b>Severe Symptoms</b>\nSevere trouble breathing\nPersistent pain in chest\nNew confusion\nInability to
+    wake or stay awake\nBluish lips or face</string>
 
 
 

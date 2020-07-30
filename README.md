@@ -25,11 +25,26 @@ To run the app, please clone this repository and import to Android Studio, where
 
 ## Technical Features
 This app was built in Android Studio, which mainly utilizes Java and XML to create Android applications. Our app includes the following features:
-* INSERT FEATURES
+* Easy-to-navigate form UI that accomodates a large, diverse range of personal conditions, previous interactions, and environmental factors
+* Generates risk score for COVID-19 susceptibiblity, transmissibility, and mortality based off factors derived from most current academic and medical research
+* Enables user to add ongoing interactions and adjusts risk score accordingly
+* Provides trustworthy and quality resources on COVID-19 that will be updated routinely
+* Sustainable alternative to forms and hard copies for contact tracing
+* Algorithm weights can be adjusted based on new research studies (since all calculations are handled by seperate Java file "RiskScore.java")
+* Protects user data privacy since all form responses are stored locally and inaccessible by developers
+* Input data is not mointored for accuracy, so users are responsible with sharing their conditions
 
 ## Improvements and Future Work
 Given that we had about 3 weeks to complete the project and that our app development team had little experience with Android Studio (even though some of us were fairly well-versed in Java and had extensive programming experience), we had to limit the scope to complete a deliverable project. However, we had litsed out further improvements that we plan to make if we had more time to work on the app:
-* INSERT IMPROVEMENTS
+* Use it to detect other illnesses 
+* Upgrade to a professional-grade detection software for contact tracing (to aid in filling out the form)
+* Factor in the Risk Score of people involved in interactions to have a more accurate representation of impact of interaction on the user risk score
+* Separate mortality score and risk score or make mortality score as a subscore
+* Ask user for location, then calculate the rest of the values based on live datasets and implemented web scripts
+* Automatically update environmental factors daily bases on live datasets
+* Upload user data to an encrypted database and create user accounts
+* Tune weights by partnering directly with COVID-19 researchers
+* Share RiskScore algorithm with businesses, who can use people's NABU Score to decide whether they are safe enough to enter public places
 
 ## Significance
 As COVID-19 continues to affect millions of lives, contact tracing is essential to slow the spread and currently relies heavily on paperwork and forms. In response, the app enables the general public to efficiently monitor their interaction activity and adjust their contact with people, and it migrates contact tracing to a sustainable, online alternative. In addition, as restaurants and public stores open, the risk of contracting COVID-19 increases. With widespread support for the app, businesses could start posting limitations based on an individual’s NABU score, and it could deter people from partaking in risky activities. Next, there is plenty of research left to complete on COVID-19 and its symptoms, and the flexibility of the NABU score algorithm enables developers to change weights and add factors easily for improved accuracy. Lastly, misinformation on COVID-19 swarms the Internet and important findings are often inaccessible to the public. Our app hopes to combat this misinformation with the “Additional Info” tab, which will only be filled with trustworthy and quality resources.

@@ -50,6 +50,7 @@ public class Tab1 extends Fragment {
 
     public Tab1() {
         // Required empty public constructor
+
     }
 
     /**

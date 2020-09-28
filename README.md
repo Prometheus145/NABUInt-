@@ -8,8 +8,8 @@ Research Team:
 * Ryleigh Sibley
 
 App Development Team:
-* Ansh Nagwekar (Project Lead)
-* William Huang
+* William Huang (Project Lead)
+* Ansh Nagwekar
 * David Muñiz
 
 ## Project Overview

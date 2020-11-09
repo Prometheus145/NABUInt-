@@ -8,7 +8,7 @@ Research Team:
 * Ryleigh Sibley
 
 App Development Team:
-* William Huang (Project Lead)
+* William Huang
 * Ansh Nagwekar
 * David Muñiz
 

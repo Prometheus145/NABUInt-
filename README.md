@@ -25,14 +25,15 @@ To run the app, please clone this repository and import to Android Studio, where
 
 ## Technical Features
 This app was built in Android Studio, which mainly utilizes Java and XML to create Android applications. Our app includes the following features:
-* Easy-to-navigate form UI that accomodates a large, diverse range of personal conditions, previous interactions, and environmental factors
-* Generates risk score for COVID-19 susceptibiblity, transmissibility, and mortality based off factors derived from most current academic and medical research
+* Easy-to-navigate form UI that accommodates a large, diverse range of personal conditions, previous interactions, and environmental factors
+* Generates risk score for COVID-19 susceptibility, transmissibility, and mortality based off factors derived from most current academic and medical research
 * Enables user to add ongoing interactions and adjusts risk score accordingly
 * Provides trustworthy and quality resources on COVID-19 that will be updated routinely
 * Sustainable alternative to forms and hard copies for contact tracing
-* Algorithm weights can be adjusted based on new research studies (since all calculations are handled by seperate Java file "RiskScore.java")
+* Algorithm weights can be adjusted based on new research studies (since all calculations are handled by separate Java file "RiskScore.java")
 * Protects user data privacy since all form responses are stored locally and inaccessible by developers
 * Input data is not monitored for accuracy, so users are responsible with sharing their conditions
+
 
 ## Improvements and Future Work
 Given that we had about 3 weeks to complete the project and that our app development team had little experience with Android Studio (even though some of us were fairly well-versed in Java and had extensive programming experience), we had to limit the scope to complete a deliverable project. However, we had litsed out further improvements that we plan to make if we had more time to work on the app:

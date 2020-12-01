@@ -12,6 +12,10 @@
 <a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">Symptoms List</a>
     </string>
 
+    <string name = "privacyPolicy">
+<a href="https://github.com/Prometheus145/NABUInt-/blob/master/NABU%20Interface%20Privacy%20Policy.txt">Tap here to access our Privacy Policy and learn more.</a>
+    </string>
+
     <string name = "numCasesLink">
 <a href = "https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">You can view this map to find out.</a>
     </string>

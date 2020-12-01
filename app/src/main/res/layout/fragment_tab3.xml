@@ -35,8 +35,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:autoLink="all"
-        android:clickable="false"
         android:gravity="center"
         android:text="@string/resource1"
         android:textAlignment="center"
@@ -50,9 +48,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:autoLink="all"
-        android:clickable="false"
-        android:gravity="right"
         android:text="@string/resource2"
         android:textColor="#0000FF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,13 +59,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:autoLink="all"
-        android:clickable="false"
-        android:gravity="left"
-        android:scrollHorizontally="false"
         android:text="@string/resource3"
         android:textColor="#0000FF"
-        android:textIsSelectable="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resource2" />
@@ -80,9 +70,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:autoLink="all"
-        android:clickable="true"
-        android:gravity="right"
         android:text="@string/resource4"
         android:textColor="#0000FF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -223,13 +210,36 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Wash your hands often with soap for at least 20 seconds\n
-Use hand sanitizer often (>60% alcohol)\nAvoid touching your face\nSocial distance by at least 6 feet from others\n
+Social distance by at least 6 feet from others\n
 Use a mask when around others\nCover coughs and sneezes\nClean and disinfect public surfaces often\"
         android:gravity="center_horizontal"
         android:textColor="#000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider13" />
+
+    <TextView
+        android:id="@+id/privacyPolicy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/privacyPolicy"
+        android:textColor="#0000FF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:text="We do not collect any personally identifiable information."
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

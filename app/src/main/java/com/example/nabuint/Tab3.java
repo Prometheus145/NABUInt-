@@ -63,8 +63,13 @@ public class Tab3 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_tab3, container, false);
+
+        // Privacy Policy
+        TextView t = (TextView) view.findViewById(R.id.privacyPolicy);
+        t.setMovementMethod(LinkMovementMethod.getInstance());
 
         // Resource 1
         TextView text = (TextView) view.findViewById(R.id.resource1);

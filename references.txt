@@ -1,0 +1,71 @@
+NASA Data and Sources
+“Air Quality.” NASA, NASA, 20 July 2020, earthdata.nasa.gov/earth-observation-data/near-real-time/hazards-and-disas ters/air-quality.   
+“Arctic Ice Melt Is Changing Ocean Currents – Climate Change: Vital Signs of the Planet.” NASA, NASA, 7 Feb. 2020, climate.nasa.gov/news/2950/arctic-ice-melt-is-changing-ocean-currents/. 
+Blumberg, Sara. “Data Shows 30 Percent Drop In Air Pollution Over Northeast U.S.” NASA, NASA, 9 Apr. 2020, www.nasa.gov/feature/goddard/2020/drop-in-air-pollution-over-northeast.
+Blumenfeld, Josh. “NASA SEDAC Application Puts Current Global COVID-19 Data at Your Fingertips.” NASA, NASA, 20 July 2020, earthdata.nasa.gov/learn/articles/sedac-covid-19-viewer. 
+“Data.GISS: GISS Surface Temperature Analysis (GISTEMP v4).” NASA, NASA,data.giss.nasa.gov/gistemp/. 
+Keck, Aries, and Abigail Seadler. “NASA Monitors COVID-19 Environmental Signals.” NASA, NASA, 29 Apr. 2020, www.nasa.gov/feature/nasa-monitors-environmental-signals-from-global-response-to-covid-19.
+Shaftel, Holly, et al. “NASA, Partner Space Agencies Amass Global View of COVID-19 Impacts – Climate Change: Vital Signs of the Planet.” NASA, NASA, 25 June 2020, climate.nasa.gov/news/2998/nasa-
+	partner-space-agencies-amass-global-view-of-covid-19-impacts/. 
+Evans, K. “2020 Average NO2.” NASA Goddard Space Flight Center, Retrieved July 27, 2020, from https://so2.gsfc.nasa.gov/no2/pix/regionas/scripts/sliderave7.php?yr=20
+Shaftel, H., Callery, S., Bailey, D. “Climate Change: Vital Signs of the Planet.” NASA, Retrieved July 29, 2020, from https://climate.nasa.gov/ 
+
+
+General Information Sources
+“Cases in the U.S.” Centers for Disease Control and Prevention, Centers for Disease Control and Prevention, 11 July 2020, www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html. 
+“COVID-19 Dashboard by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University (JH.” ArcGIS Dashboards, John Hopkins University, www.arcgis.com/apps/opsdashboard/index.html. 
+“Coronavirus Disease (COVID-19).” World Health Organization, World Health Organization, www.who.int/emergencies/diseases/novel-coronavirus-2019.
+“Principles of Epidemiology.” Centers for Disease Control and Prevention, Centers for Disease Control and Prevention, 18 May 2012, www.cdc.gov/csels/dsepd/ss1978/lesson3/section2.html. 
+“CDC COVID Data Tracker.” Centers for Disease Control and Prevention, Centers for Disease Control and Prevention, 2020, www.cdc.gov/covid-data-tracker/
+
+
+Factors Sources 
+Eslami, Hadi, and Mahrokh Jalili. “The Role of Environmental Factors to Transmission of SARS-CoV-2 (COVID-19).” AMB Express, Springer Berlin Heidelberg, 15 May 2020, www.ncbi.nlm.nih.gov/pmc/articles/
+	PMC7226715/. 
+Gerretsen, Isabelle. “How Air Pollution Exacerbates Covid-19.” BBC Future, BBC, www.bbc.com/future/article/20200427-how-air-pollution-exacerbates-covid-19. 
+“Assessing Risk Factors for Severe COVID-19 Illness.” Centers for Disease Control and Prevention, Centers for Disease Control and Prevention, 25 June 2020, www.cdc.gov/coronavirus/2019-ncov/covid-data/
+	investigations-discovery/assessing-risk-factors.html. 
+“People Of Any Age with Underlying Medical Conditions.” Centers for Disease Control and Prevention, Centers for Disease Control and Prevention, 17 July 2020, www.cdc.gov/coronavirus/2019-ncov/need-
+	extra-precautions/people-with-medical-conditions.html. 
+“Evidence Used to Update the List of Underlying Medical Conditions That Increase a Person's Risk of Severe Illness from COVID-19.” Centers for Disease Control and Prevention, Centers for Disease Control 
+	and Prevention, 17 July 2020, www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/evidence-table.html. 
+“Older U.S. Adults See COVID-19 Outbreaks as a Major Threat to Their Personal Health; Younger Americans Say It Is a Major Threat to Their Finances.” Pew Research Center, Pew Research Center, 16 June 
+	2020, www.pewresearch.org/fact-tank/2020/06/16/experiences-with-the-covid-19-outbreak-can-vary-for-americans-of-different-ages/ft_20-06-10_covidage_1/. 
+Zheng, Zhaohai, et al. “Risk Factors of Critical & Mortal COVID-19 Cases: A Systematic Literature Review and Meta-Analysis.” The Journal of Infection, The British Infection Association. Published by 
+	Elsevier Ltd., 23 Apr. 2020, www.ncbi.nlm.nih.gov/pmc/articles/PMC7177098/. 
+Liu, Yang, et al. “Association between Age and Clinical Characteristics and Outcomes of COVID-19.” The European Respiratory Journal, European Respiratory Society, 27 May 2020, www.ncbi.nlm.nih.gov/pmc/
+	articles/PMC7173682/. 
+“How Does COVID-19 Affect Different Age Groups?” NWHN, 18 Mar. 2020, www.nwhn.org/how-does-covid-19-affect-different-age-groups/.
+Gerresten, Isabelle. “How Air Pollution Exacerbates Covid-19.” BBC Future, BBC, 27 Apr. 2020,  www.bbc.com/future/article/20200427-how-air-pollution-exacerbates-covid-19. 
+Eslami, Hadi, and Mahrokh Jalili. “The Role of Environmental Factors to Transmission of SARS-CoV-2 (COVID-19).” AMB Express, Springer Berlin Heidelberg, 15 May 2020, www.ncbi.nlm.nih.gov/pmc/articles/
+	PMC7226715/. 
+“Older Adults.” Centers for Disease Control and Prevention, Centers for Disease Control and Prevention, 25 June 2020, www.cdc.gov/coronavirus/2019-ncov/need-extra-precautions/older-adults.html. 
+“Coronavirus (COVID-19): Advice for People with Specific Medical Conditions.” Scottish Government, www.gov.scot/publications/coronavirus-covid-19-tailored-advice-for-those-who-live-with-specific-
+	medical-conditions/. 
+“Disposition of Non-Hospitalized Patients with COVID-19.” Centers for Disease Control and Prevention, Centers for Disease Control and Prevention, 17 July 2020, www.cdc.gov/coronavirus/2019-ncov/hcp/
+	disposition-in-home-patients.html. 
+
+
+Symptom and prevention sources
+Publishing, Harvard Health. “COVID-19 Basics.” Harvard Health, Mar. 2020, www.health.harvard.edu/diseases-and-conditions/covid-19-basics. 
+“UNITED STATES DEPARTMENT OF LABOR.” Safety and Health Topics | COVID-19 - Control and Prevention | Occupational Safety and Health Administration,  www.osha.gov/SLTC/covid-19/controlprevention.html. 
+“How to Protect Yourself & Others.” Centers for Disease Control and Prevention, Centers for Disease Control and Prevention, 24 Apr. 2020, www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/
+	prevention.html. 
+“Personal and Social Activities.” Centers for Disease Control and Prevention, Centers for Disease Control and Prevention, 15 June 2020, www.cdc.gov/coronavirus/2019-ncov/daily-life-coping/personal-
+	social-activities.html. 
+“Environmental Wellness During COVID-19.” Environmental Wellness During COVID-19 | Student Affairs, studentaffairs.duke.edu/what-wellness/environmentalwellness.  
+
+
+Location 
+Shepherd, Marshall. “Why Geography Is A Key Part Of Fighting The COVID-19 Coronavirus Outbreak.” Forbes, Forbes Magazine, 6 Mar. 2020, www.forbes.com/sites/marshallshepherd/2020/03/05/why-the-
+	discipline-of-geography-is-a-key-part-of-the-coronavirus-fight/. 
+Eslami, Hadi, and Mahrokh Jalili. “The Role of Environmental Factors to Transmission of SARS-CoV-2 (COVID-19).” AMB Express, Springer Berlin Heidelberg, 15 May 2020, www.ncbi.nlm.nih.gov/pmc/articles/
+	PMC7226715/. 
+“Geographic Differences in COVID-19 Cases, Deaths, and Incidence - United States, February 12–April 7, 2020.” Centers for Disease Control and Prevention, Centers for Disease Control and Prevention, 16 	Apr. 2020, www.cdc.gov/mmwr/volumes/69/wr/mm6915e4.htm. 
+Renee Cho|June, and Renee Cho. “COVID-19's Long-Term Effects on Climate Change-For Better or Worse.” State of the Planet, 7 July 2020, blogs.ei.columbia.edu/2020/06/25/co vid-19-impacts-climate-change/. 
+McGrath, Matt. “Climate Change and Coronavirus: Five Charts about the Biggest Carbon Crash.” BBC News, BBC, 6 May 2020, www.bbc.com/news/science-environment-52485712.
+Heneghan, Carl, and Tom Jefferson. “Effect of Latitude on COVID-19.” CEBM, 28 May 2020, www.cebm.net/covid-19/effect-of-latitude-on-covid-19/. 
+Jayaweera, Mahesh, et al. “Transmission of COVID-19 Virus by Droplets and Aerosols: A Critical Review on the Unresolved Dichotomy.” Environmental Research, Elsevier Inc., 13 June 2020, 
+	www.ncbi.nlm.nih.gov/pmc/articles/PMC7293495/. 
+
+
